@@ -1,19 +1,17 @@
 //
-//  ViewController.swift
-//  COVID19 CANADA
+//  trackerVC.swift
+//  Covid19 in CA
 //
-//  Created by Abdul R on 2021-04-25.
+//  Created by Abdul R on 2021-03-28.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class trackerVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
-
-
 }
-

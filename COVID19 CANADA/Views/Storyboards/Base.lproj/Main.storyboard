@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VAE-ll-0hL">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="lpl-5w-v40">
+            <objects>
+                <tabBarController id="VAE-ll-0hL" sceneMemberID="viewController">
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                    <tabBar key="tabBar" opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" translucent="NO" id="Si5-E2-raQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" systemColor="systemRedColor"/>
+                        <color key="barTintColor" systemColor="systemBackgroundColor"/>
+                        <color key="selectedImageTintColor" systemColor="systemRedColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="pGh-zp-QvW" kind="relationship" relationship="viewControllers" id="zRl-bd-Q8I"/>
+                        <segue destination="XtA-r0-HHJ" kind="relationship" relationship="viewControllers" id="dik-7P-hFD"/>
+                        <segue destination="ooV-m1-U0u" kind="relationship" relationship="viewControllers" id="CyC-1b-14A"/>
+                        <segue destination="Xr7-I7-Y1T" kind="relationship" relationship="viewControllers" id="gVv-qY-S0h"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rKC-SI-scS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-55" y="-790"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="c0e-Bf-ea1">
+            <objects>
+                <navigationController id="ooV-m1-U0u" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="icons8-news-40" id="Sgs-hr-BH4"/>
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="XWn-sQ-iIz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Yjl-gx-Q3R" kind="relationship" relationship="rootViewController" id="UH3-ay-8OV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kD9-AQ-UOO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-320" y="-20"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Byg-61-XiE">
+            <objects>
+                <navigationController id="pGh-zp-QvW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="icons8-autumn-40" id="Mlb-cv-WKy"/>
+                    <navigationBar key="navigationBar" hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" id="e7e-ZO-oB6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vHg-wg-EFE" kind="relationship" relationship="rootViewController" id="kk7-9u-RhG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YPS-jD-TWK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1033" y="-20"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="5r1-OG-9JS">
+            <objects>
+                <viewController id="vHg-wg-EFE" customClass="mainVC" customModule="COVID19_CANADA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y1g-ou-eT3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Wu7-E0-k8x"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="weT-sK-Ayg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X2S-Ph-LIZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1033" y="690"/>
+        </scene>
+        <!--NewsVC-->
+        <scene sceneID="UEi-gB-OPQ">
+            <objects>
+                <viewController id="Yjl-gx-Q3R" customClass="newsVC" customModule="COVID19_CANADA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZRU-f9-Jxg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="zPl-tG-9pa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="r9z-QN-Zdw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rib-Kq-0rg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-320" y="690"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Pe4-ZB-GLj">
+            <objects>
+                <navigationController id="Xr7-I7-Y1T" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="icons8-smartphone-approve-40" id="bTd-VT-jue"/>
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="jyT-PY-8ei">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="CgK-Is-knH" kind="relationship" relationship="rootViewController" id="cuq-UA-Oi3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ul8-wj-Tu4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1168" y="-20"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="w8i-Rk-ZQa">
+            <objects>
+                <navigationController id="XtA-r0-HHJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="icons8-coronavirus-40" id="z9p-04-jaS"/>
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="RLI-eT-Bx5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vmW-PM-7Tm" kind="relationship" relationship="rootViewController" id="U7B-L0-15w"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vG9-xq-UTz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="407" y="-20"/>
+        </scene>
+        <!--CovidVC-->
+        <scene sceneID="2ff-Cn-8JX">
+            <objects>
+                <viewController id="vmW-PM-7Tm" customClass="covidVC" customModule="COVID19_CANADA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5cf-LD-SyT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="enI-Vu-ocL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UnJ-f2-6WF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h0R-Lk-QaQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="406" y="690"/>
+        </scene>
+        <!--TrackerVC-->
+        <scene sceneID="deR-9D-LEH">
+            <objects>
+                <viewController id="CgK-Is-knH" customClass="trackerVC" customModule="COVID19_CANADA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eWC-Ow-2H5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Cvy-ah-EfA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gOU-Gi-DXF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1v5-5H-TBa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1167" y="690"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icons8-autumn-40" width="40" height="40"/>
+        <image name="icons8-coronavirus-40" width="40" height="40"/>
+        <image name="icons8-news-40" width="40" height="40"/>
+        <image name="icons8-smartphone-approve-40" width="40" height="40"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
