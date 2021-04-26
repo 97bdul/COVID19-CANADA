@@ -83,7 +83,7 @@ class RegionVC: UIViewController, UICollectionViewDelegate, UICollectionViewDele
         return header
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: view.frame.size.width , height: 455)
+        return CGSize(width: view.frame.size.width , height: 430)
     }
     
     //  ViewDidLayoutSubViews

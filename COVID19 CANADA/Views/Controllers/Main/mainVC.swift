@@ -21,7 +21,6 @@ class mainVC: UIViewController,UICollectionViewDelegate, UICollectionViewDelegat
     
     let newsKeyword = "Covid"
     
-    
     //APICalls
     func apiCall() {
         covidAPI.shared.fecthAPI(url:urlConstants.ONurl,collectionView: bottomCollectionView) { (data) in
@@ -100,7 +99,6 @@ class mainVC: UIViewController,UICollectionViewDelegate, UICollectionViewDelegat
         
     }()
     
-
     /// CollectionView Docking
     /// - Parameters:
     ///   - collectionView: topCollectionView, BottomCollectionView

@@ -13,7 +13,7 @@ class RegionCell: UICollectionViewCell {
     
     private let cellView : UIView = {
         let view = UIView()
-        view.backgroundColor = #colorLiteral(red: 0.3497570973, green: 0.05972873465, blue: 0.9408810404, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0.2605174184, green: 0.2605243921, blue: 0.260520637, alpha: 1)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -42,6 +42,12 @@ class RegionCell: UICollectionViewCell {
         return label
     }()
     
+    private let totalRecovLabel : UILabel = {
+        let label = UILabel()
+        label.propLabel(fontSize: 15, fontWeight: .bold,textColor: .systemBackground, textAlignment: .left, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 1, borderColor: .clear)
+        return label
+    }()
+    
     private let totalDeathsLabel : UILabel = {
         let label = UILabel()
         label.propLabel(fontSize: 15, fontWeight: .bold,textColor: .systemBackground, textAlignment: .left, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 1, borderColor: .clear)
@@ -52,24 +58,26 @@ class RegionCell: UICollectionViewCell {
         regionLabel.text = "\(region)"
         
         let IntofTodDeaths = Int(totDeaths)
-        totalCasesLabel.text = "TOT CASES       \(totCase) "
-        totalDeathsLabel.text = "TOT DEATHS    \(IntofTodDeaths)"
-        todayCasesLabel.text = "TODAY     \(todCases)"
+        totalCasesLabel.text  = "CASES     \(totCase) "
+        todayCasesLabel.text  = "TODAY     \(todCases)"
+        totalDeathsLabel.text = "DEATHS    \(IntofTodDeaths)"
+        totalRecovLabel.text  = "RECOV     \(todCases)"
+        
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        regionLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5).isActive = true
+        regionLabel.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
         regionLabel.widthAnchor.constraint(equalTo:contentView.widthAnchor).isActive = true
         regionLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
         regionLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,constant: 5).isActive = true
         
-        cellView.topAnchor.constraint(equalTo: regionLabel.bottomAnchor).isActive = true
+        cellView.topAnchor.constraint(equalTo: regionLabel.bottomAnchor,constant: 3).isActive = true
         cellView.widthAnchor.constraint(equalTo: contentView.widthAnchor).isActive = true
         cellView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
         
-        shadowView.applyshadowWithCorner(containerView: cellView, cornerRadious: 8, color: #colorLiteral(red: 0.1764705926, green: 0.01176470611, blue: 0.5607843399, alpha: 1))
+        shadowView.applyshadowWithCorner(containerView: cellView, cornerRadious: 8, color: #colorLiteral(red: 0.1298420429, green: 0.1298461258, blue: 0.1298439503, alpha: 1))
         
         shadowView.topAnchor.constraint(equalTo: cellView.topAnchor).isActive = true
         shadowView.widthAnchor.constraint(equalTo: cellView.widthAnchor).isActive = true
@@ -88,11 +96,17 @@ class RegionCell: UICollectionViewCell {
         todayCasesLabel.heightAnchor.constraint(equalToConstant: 25).isActive = true
         todayCasesLabel.leadingAnchor.constraint(equalTo: totalCasesLabel.trailingAnchor).isActive = true
         
+        contentView.addSubview(totalRecovLabel)
+        totalRecovLabel.topAnchor.constraint(equalTo: todayCasesLabel.bottomAnchor, constant: -1).isActive = true
+        totalRecovLabel.widthAnchor.constraint(equalToConstant: 195).isActive = true
+        totalRecovLabel.heightAnchor.constraint(equalToConstant: 25).isActive = true
+        totalRecovLabel.leadingAnchor.constraint(equalTo: cellView.leadingAnchor,constant: 10).isActive = true
+        
         contentView.addSubview(totalDeathsLabel)
-        totalDeathsLabel.topAnchor.constraint(equalTo: todayCasesLabel.bottomAnchor).isActive = true
-        totalDeathsLabel.widthAnchor.constraint(equalToConstant: 195).isActive = true
+        totalDeathsLabel.topAnchor.constraint(equalTo: todayCasesLabel.bottomAnchor, constant: -1).isActive = true
+        totalDeathsLabel.widthAnchor.constraint(equalToConstant: 115).isActive = true
         totalDeathsLabel.heightAnchor.constraint(equalToConstant: 25).isActive = true
-        totalDeathsLabel.leadingAnchor.constraint(equalTo: cellView.leadingAnchor,constant: 10).isActive = true
+        totalDeathsLabel.leadingAnchor.constraint(equalTo: totalRecovLabel.trailingAnchor).isActive = true
         
     }
     
