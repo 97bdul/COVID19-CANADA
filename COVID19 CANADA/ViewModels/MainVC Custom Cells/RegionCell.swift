@@ -13,7 +13,7 @@ class RegionCell: UICollectionViewCell {
     
     private let cellView : UIView = {
         let view = UIView()
-        view.backgroundColor = #colorLiteral(red: 0.2605174184, green: 0.2605243921, blue: 0.260520637, alpha: 1)
+        view.backgroundColor = .link
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -77,7 +77,7 @@ class RegionCell: UICollectionViewCell {
         cellView.widthAnchor.constraint(equalTo: contentView.widthAnchor).isActive = true
         cellView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
         
-        shadowView.applyshadowWithCorner(containerView: cellView, cornerRadious: 8, color: #colorLiteral(red: 0.1298420429, green: 0.1298461258, blue: 0.1298439503, alpha: 1))
+        shadowView.applyshadowWithCorner(containerView: cellView, cornerRadious: 8, color: #colorLiteral(red: 0.1365393598, green: 0.2540451119, blue: 0.5676003658, alpha: 1))
         
         shadowView.topAnchor.constraint(equalTo: cellView.topAnchor).isActive = true
         shadowView.widthAnchor.constraint(equalTo: cellView.widthAnchor).isActive = true
