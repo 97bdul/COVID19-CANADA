@@ -10,8 +10,7 @@ import UIKit
 import Foundation
 
 struct topConstanats {
-    
-    static let cellShadowColor: UIColor = .secondaryLabel
+
     static let cellCornerRadius: CGFloat = 10
     
     static let dataLabelCR: CGFloat = 10
@@ -74,7 +73,7 @@ class topCell: UICollectionViewCell {
     override func layoutSubviews() {
         
         
-        shadowView.applyshadowWithCorner(containerView: cellView, cornerRadious: topConstanats.cellCornerRadius, color: #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
+        shadowView.applyshadowWithCorner(containerView: cellView, cornerRadious: topConstanats.cellCornerRadius, color: #colorLiteral(red: 0.8671220974, green: 0.8671220974, blue: 0.8671220974, alpha: 1))
         
         cellView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
         cellView.widthAnchor.constraint(equalTo: contentView.widthAnchor).isActive = true
@@ -105,7 +104,6 @@ class topCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         contentView.addSubview(cellView)
         contentView.addSubview(footerLink)
         contentView.addSubview(newsImage)

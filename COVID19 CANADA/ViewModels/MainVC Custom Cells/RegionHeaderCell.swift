@@ -23,8 +23,7 @@ class RegionHeaderCell: UICollectionReusableView, ChartViewDelegate {
         let imView = UILabel()
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "ALBERTA"
-        label.propLabel(fontSize: 25, fontWeight: .semibold, textColor: .label, textAlignment: .left, Backgroundcolor: .clear, cornerRadius: 0, borderWidth: 0, borderColor: .clear)
+        label.propLabel(fontSize: 20, fontWeight: .semibold, textColor: .label, textAlignment: .left, Backgroundcolor: .clear, cornerRadius: 0, borderWidth: 0, borderColor: .clear)
         return label
     }()
     
@@ -33,7 +32,7 @@ class RegionHeaderCell: UICollectionReusableView, ChartViewDelegate {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Reported Cases"
-        label.propLabel(fontSize: 15, fontWeight: .thin, textColor: .label, textAlignment: .right, Backgroundcolor: .clear, cornerRadius: 0, borderWidth: 0, borderColor: .clear)
+        label.propLabel(fontSize: 13, fontWeight: .thin, textColor: .label, textAlignment: .right, Backgroundcolor: .clear, cornerRadius: 0, borderWidth: 0, borderColor: .clear)
         return label
     }()
     
@@ -65,15 +64,15 @@ class RegionHeaderCell: UICollectionReusableView, ChartViewDelegate {
     
     private let totalCasesLabel : UILabel = {
         let label = UILabel()
-        label.text = "Reported Total"
-        label.propLabel(fontSize: 14, fontWeight: .bold,textColor: .systemBackground, textAlignment: .left, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 0, borderColor: .clear)
+        label.text = "Total Cases"
+        label.propLabel(fontSize: 13, fontWeight: .semibold,textColor: .systemBackground, textAlignment: .left, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 0, borderColor: .clear)
         return label
     }()
     
     private let totalCasesValue : UILabel = {
         let label = UILabel()
         label.text = "12338673"
-        label.propLabel(fontSize: 30, fontWeight: .regular,textColor: .systemBackground, textAlignment: .left, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 1, borderColor: .clear)
+        label.propLabel(fontSize: 25, fontWeight: .regular,textColor: .systemBackground, textAlignment: .left, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 1, borderColor: .clear)
         return label
     }()
 
@@ -224,6 +223,9 @@ class RegionHeaderCell: UICollectionReusableView, ChartViewDelegate {
     }()
     
     func configLineCharView(entries : [BarChartDataEntry],monVals : [String], selectedProvince: String) {
+        
+        headLabel.text = selectedProvince.uppercased()
+        
         let set = BarChartDataSet(entries: entries)
         set.barShadowColor = #colorLiteral(red: 0.4093846275, green: 0.4093846275, blue: 0.4093846275, alpha: 0.2955500116)
         set.drawValuesEnabled = false

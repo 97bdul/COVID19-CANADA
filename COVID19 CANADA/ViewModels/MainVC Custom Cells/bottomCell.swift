@@ -9,7 +9,7 @@ import UIKit
 
 struct bottomConstanats {
     
-    static let cellShadowColor: UIColor = #colorLiteral(red: 0.1764705926, green: 0.01176470611, blue: 0.5607843399, alpha: 1)
+    static let cellShadowColor: UIColor = #colorLiteral(red: 0, green: 0.4027371444, blue: 0.8489039877, alpha: 1)
     static let cellCornerRadius: CGFloat = 10
     
     static let dataLabelCR: CGFloat = 10
@@ -21,15 +21,14 @@ class bottomCell: UICollectionViewCell {
     
     private let cellView : UIView = {
         let view = UIView()
+        view.backgroundColor = .systemBlue
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     private let shadowView: UIView = {
         let view = UIView()
-        view.backgroundColor = .systemBackground
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = #colorLiteral(red: 0.5272460771, green: 0.335777277, blue: 0.9285493957, alpha: 1)
         return view
     }()
     
@@ -48,7 +47,7 @@ class bottomCell: UICollectionViewCell {
     
     private let activeCasesLabel : UILabel = {
         let label = UILabel()
-        label.propLabel(fontSize: 16, fontWeight: .bold,textColor: .systemRed, textAlignment: .left, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 1, borderColor: .clear)
+        label.propLabel(fontSize: 16, fontWeight: .bold,textColor: .systemBackground, textAlignment: .left, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 1, borderColor: .clear)
         return label
     }()
     
@@ -121,7 +120,6 @@ class bottomCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         contentView.addSubview(cellView)
         contentView.addSubview(shadowView)
         contentView.addSubview(provLabel)
@@ -129,6 +127,7 @@ class bottomCell: UICollectionViewCell {
         contentView.addSubview(activeCasesLabel)
         contentView.addSubview(totalDeaths)
         contentView.addSubview(totalRecovered)
+        
     }
     
     required init?(coder: NSCoder) {

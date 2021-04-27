@@ -54,13 +54,6 @@ class mainVC: UIViewController,UICollectionViewDelegate, UICollectionViewDelegat
         return label
     }()
     
-    private let footerLabel: UILabel = {
-        let label = UILabel()
-        label.propLabel(fontSize: 12, fontWeight: .regular, textColor: .black, textAlignment: .left, Backgroundcolor: .clear, cornerRadius: 0, borderWidth: 0, borderColor: .clear)
-        label.text = " Analytics - News - Tracker"
-        return label
-    }()
-    
     private let searchButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -79,7 +72,7 @@ class mainVC: UIViewController,UICollectionViewDelegate, UICollectionViewDelegat
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.showsHorizontalScrollIndicator = false
-        collectionView.backgroundColor = mainConstants.collectionViewBgColor
+        collectionView.backgroundColor = .systemBackground
         return collectionView
         
     }()
@@ -173,12 +166,6 @@ class mainVC: UIViewController,UICollectionViewDelegate, UICollectionViewDelegat
         headViewLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
         headViewLabel.widthAnchor.constraint(equalToConstant: 220).isActive = true
         headViewLabel.leadingAnchor.constraint(equalTo: headerView.leadingAnchor,constant: 20).isActive = true
-        
-        view.addSubview(footerLabel)
-        footerLabel.topAnchor.constraint(equalTo: headViewLabel.bottomAnchor,constant: -17).isActive = true
-        footerLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        footerLabel.widthAnchor.constraint(equalToConstant: 150).isActive = true
-        footerLabel.leadingAnchor.constraint(equalTo: headerView.leadingAnchor,constant: 70).isActive = true
         
         view.addSubview(searchButton)
         searchButton.topAnchor.constraint(equalTo: headerView.topAnchor).isActive = true
