@@ -23,16 +23,7 @@ class RegionHeaderCell: UICollectionReusableView, ChartViewDelegate {
         let imView = UILabel()
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.propLabel(fontSize: 20, fontWeight: .semibold, textColor: .label, textAlignment: .left, Backgroundcolor: .clear, cornerRadius: 0, borderWidth: 0, borderColor: .clear)
-        return label
-    }()
-    
-    //  TopBar Label
-    private let mylabel : UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Reported Cases"
-        label.propLabel(fontSize: 13, fontWeight: .thin, textColor: .label, textAlignment: .right, Backgroundcolor: .clear, cornerRadius: 0, borderWidth: 0, borderColor: .clear)
+        label.propLabel(fontSize: 20, fontWeight: .regular, textColor: .label, textAlignment: .center, Backgroundcolor: .clear, cornerRadius: 0, borderWidth: 0, borderColor: .clear)
         return label
     }()
     
@@ -47,6 +38,20 @@ class RegionHeaderCell: UICollectionReusableView, ChartViewDelegate {
     private let secShadowView: UIView = {
         let view = UIView()
         return view
+    }()
+    
+    private let totalHeading : UILabel = {
+        let label = UILabel()
+        label.text = "cumulative"
+        label.propLabel(fontSize: 13, fontWeight: .semibold,textColor: .systemBackground, textAlignment: .left, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 0, borderColor: .clear)
+        return label
+    }()
+    
+    private let changeHeading : UILabel = {
+        let label = UILabel()
+        label.text = "change"
+        label.propLabel(fontSize: 25, fontWeight: .regular,textColor: .systemBackground, textAlignment: .left, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 1, borderColor: .clear)
+        return label
     }()
     
     //  CasesLabel view
@@ -64,7 +69,7 @@ class RegionHeaderCell: UICollectionReusableView, ChartViewDelegate {
     
     private let totalCasesLabel : UILabel = {
         let label = UILabel()
-        label.text = "Total Cases"
+        label.text = "Reported Total"
         label.propLabel(fontSize: 13, fontWeight: .semibold,textColor: .systemBackground, textAlignment: .left, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 0, borderColor: .clear)
         return label
     }()
@@ -75,66 +80,66 @@ class RegionHeaderCell: UICollectionReusableView, ChartViewDelegate {
         label.propLabel(fontSize: 25, fontWeight: .regular,textColor: .systemBackground, textAlignment: .left, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 1, borderColor: .clear)
         return label
     }()
-
+    
     private let activeCasesLabel : UILabel = {
         let label = UILabel()
-        label.propLabel(fontSize: 15, fontWeight: .semibold,textColor: .darkGray, textAlignment: .left, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 1, borderColor: .clear)
+        label.propLabel(fontSize: 15, fontWeight: .semibold,textColor: #colorLiteral(red: 0.2548710108, green: 0.2745279074, blue: 0.3019200563, alpha: 1), textAlignment: .left, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 1, borderColor: .clear)
         label.text = "Active Cases"
         return label
     }()
     
     private let activeCasesValue : UILabel = {
         let label = UILabel()
-        label.propLabel(fontSize: 15, fontWeight: .semibold,textColor: .darkGray, textAlignment: .left, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 1, borderColor: .clear)
+        label.propLabel(fontSize: 15, fontWeight: .semibold,textColor: #colorLiteral(red: 0.2548710108, green: 0.2745279074, blue: 0.3019200563, alpha: 1), textAlignment: .left, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 1, borderColor: .clear)
         label.text = "12338673"
         return label
     }()
     
     private let casesChange : UILabel = {
         let label = UILabel()
-        label.propLabel(fontSize: 15, fontWeight: .semibold,textColor: .darkGray, textAlignment: .right, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 1, borderColor: .clear)
+        label.propLabel(fontSize: 15, fontWeight: .semibold,textColor: #colorLiteral(red: 0.2548710108, green: 0.2745279074, blue: 0.3019200563, alpha: 1), textAlignment: .right, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 1, borderColor: .clear)
         label.text = "31237"
         return label
     }()
     
     private let totalRecoveredLabel : UILabel = {
         let label = UILabel()
-        label.propLabel(fontSize: 15, fontWeight: .semibold,textColor: .darkGray, textAlignment: .left, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 1, borderColor: .clear)
+        label.propLabel(fontSize: 15, fontWeight: .semibold,textColor: .link, textAlignment: .left, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 1, borderColor: .clear)
         label.text = "Recovery"
         return label
     }()
     
     private let totalRecoveredValue : UILabel = {
         let label = UILabel()
-        label.propLabel(fontSize: 15, fontWeight: .semibold,textColor: .darkGray, textAlignment: .left, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 1, borderColor: .clear)
+        label.propLabel(fontSize: 15, fontWeight: .semibold,textColor: .link, textAlignment: .left, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 1, borderColor: .clear)
         label.text = "312312312"
         return label
     }()
     
     private let todayRecovered : UILabel = {
         let label = UILabel()
-        label.propLabel(fontSize: 15, fontWeight: .semibold,textColor: .darkGray, textAlignment: .right, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 1, borderColor: .clear)
+        label.propLabel(fontSize: 15, fontWeight: .semibold,textColor: .link, textAlignment: .right, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 1, borderColor: .clear)
         label.text = "31237"
         return label
     }()
- 
+    
     private let TotaldeathsLabel : UILabel = {
         let label = UILabel()
-        label.propLabel(fontSize: 15, fontWeight: .semibold,textColor: .darkGray, textAlignment: .left, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 1, borderColor: .clear)
+        label.propLabel(fontSize: 15, fontWeight: .semibold,textColor: #colorLiteral(red: 0.2548710108, green: 0.2745279074, blue: 0.3019200563, alpha: 1), textAlignment: .left, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 1, borderColor: .clear)
         label.text = "Deaths"
         return label
     }()
     
     private let TotaldeathsValue : UILabel = {
         let label = UILabel()
-        label.propLabel(fontSize: 15, fontWeight: .semibold,textColor: .darkGray, textAlignment: .left, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 1, borderColor: .clear)
+        label.propLabel(fontSize: 15, fontWeight: .semibold,textColor: #colorLiteral(red: 0.2548710108, green: 0.2745279074, blue: 0.3019200563, alpha: 1), textAlignment: .left, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 1, borderColor: .clear)
         label.text = "31237"
         return label
     }()
     
     private let deathsChange : UILabel = {
         let label = UILabel()
-        label.propLabel(fontSize: 15, fontWeight: .semibold,textColor: .darkGray, textAlignment: .right, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 1, borderColor: .clear)
+        label.propLabel(fontSize: 15, fontWeight: .semibold,textColor: #colorLiteral(red: 0.2548710108, green: 0.2745279074, blue: 0.3019200563, alpha: 1), textAlignment: .right, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 1, borderColor: .clear)
         label.text = "31237"
         return label
     }()
@@ -156,27 +161,27 @@ class RegionHeaderCell: UICollectionReusableView, ChartViewDelegate {
     private let tests : UILabel = {
         let label = UILabel()
         label.propLabel(fontSize: 15, fontWeight: .semibold,textColor: .link, textAlignment: .right, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 1, borderColor: .clear)
-        label.text = "33232"
+        label.text = "300000"
         return label
     }()
     
     private let totalVaccineLabel : UILabel = {
         let label = UILabel()
-        label.propLabel(fontSize: 15, fontWeight: .semibold,textColor: .systemGreen, textAlignment: .left, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 1, borderColor: .clear)
+        label.propLabel(fontSize: 15, fontWeight: .semibold,textColor: #colorLiteral(red: 0.2548710108, green: 0.2745279074, blue: 0.3019200563, alpha: 1), textAlignment: .left, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 1, borderColor: .clear)
         label.text = "Vaccinated"
         return label
     }()
     
     private let totalVaccine : UILabel = {
         let label = UILabel()
-        label.propLabel(fontSize: 15, fontWeight: .semibold,textColor: .systemGreen, textAlignment: .left, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 1, borderColor: .clear)
+        label.propLabel(fontSize: 15, fontWeight: .semibold,textColor: #colorLiteral(red: 0.2548710108, green: 0.2745279074, blue: 0.3019200563, alpha: 1), textAlignment: .left, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 1, borderColor: .clear)
         label.text = "331321232"
         return label
     }()
     
     private let todayVaccine : UILabel = {
         let label = UILabel()
-        label.propLabel(fontSize: 15, fontWeight: .semibold,textColor: .systemGreen, textAlignment: .right, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 1, borderColor: .clear)
+        label.propLabel(fontSize: 15, fontWeight: .semibold,textColor: #colorLiteral(red: 0.2548710108, green: 0.2745279074, blue: 0.3019200563, alpha: 1), textAlignment: .right, Backgroundcolor: .clear, cornerRadius: bottomConstanats.dataLabelCR, borderWidth: 1, borderColor: .clear)
         label.text = "33232"
         return label
     }()
@@ -262,97 +267,90 @@ class RegionHeaderCell: UICollectionReusableView, ChartViewDelegate {
         topBar.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor).isActive = true
         topBar.heightAnchor.constraint(equalToConstant: 60).isActive = true
         
-        headLabel.topAnchor.constraint(equalTo: topBar.topAnchor, constant: 5).isActive = true
-        headLabel.widthAnchor.constraint(equalToConstant: 160).isActive = true
+        headLabel.topAnchor.constraint(equalTo: topBar.topAnchor, constant: 7).isActive = true
+        headLabel.widthAnchor.constraint(equalToConstant: 200).isActive = true
         headLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        headLabel.leadingAnchor.constraint(equalTo: topBar.leadingAnchor, constant: 20).isActive = true
+        headLabel.centerXAnchor.constraint(equalTo: topBar.centerXAnchor).isActive = true
         
-        mylabel.topAnchor.constraint(equalTo: topBar.topAnchor, constant: -5).isActive = true
-        mylabel.widthAnchor.constraint(equalToConstant: 125).isActive = true
-        mylabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        mylabel.trailingAnchor.constraint(equalTo: topBar.trailingAnchor,constant: -20).isActive = true
+        casesShadowView.applyshadowWithCorner(containerView: casesCellView, cornerRadious: 15, color: #colorLiteral(red: 0.117527779, green: 0.3159457476, blue: 0.5946732338, alpha: 1))
         
-       
-        
-        casesShadowView.applyshadowWithCorner(containerView: casesCellView, cornerRadious: 20, color: #colorLiteral(red: 0.117527779, green: 0.3159457476, blue: 0.5946732338, alpha: 1))
-    
-        casesCellView.topAnchor.constraint(equalTo: mylabel.bottomAnchor,constant: 5).isActive = true
-        casesCellView.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, constant: -30).isActive = true
+        casesCellView.topAnchor.constraint(equalTo: headLabel.bottomAnchor,constant: 8).isActive = true
+        casesCellView.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, constant: -40).isActive = true
         casesCellView.heightAnchor.constraint(equalToConstant: 65).isActive = true
         casesCellView.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor).isActive = true
         
         totalCasesLabel.topAnchor.constraint(equalTo: casesCellView.topAnchor,constant: 5).isActive = true
         totalCasesLabel.widthAnchor.constraint(equalToConstant: 150).isActive = true
         totalCasesLabel.heightAnchor.constraint(equalToConstant: 21).isActive = true
-        totalCasesLabel.leadingAnchor.constraint(equalTo: casesCellView.leadingAnchor, constant: 20).isActive = true
+        totalCasesLabel.leadingAnchor.constraint(equalTo: casesCellView.leadingAnchor, constant: 15).isActive = true
         
         totalCasesValue.topAnchor.constraint(equalTo: totalCasesLabel.bottomAnchor,constant: 3).isActive = true
         totalCasesValue.widthAnchor.constraint(equalToConstant: 250).isActive = true
         totalCasesValue.heightAnchor.constraint(equalToConstant: 24).isActive = true
-        totalCasesValue.leadingAnchor.constraint(equalTo: casesCellView.leadingAnchor, constant: 18).isActive = true
-    
+        totalCasesValue.leadingAnchor.constraint(equalTo: casesCellView.leadingAnchor, constant: 12).isActive = true
+        
         secShadowView.applyshadowWithCorner(containerView: secCellView, cornerRadious: 15, color: #colorLiteral(red: 0.8374180198, green: 0.8374378085, blue: 0.8374271393, alpha: 1))
-    
+        
         secCellView.topAnchor.constraint(equalTo: casesCellView.bottomAnchor,constant: 15).isActive = true
-        secCellView.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, constant: -30).isActive = true
+        secCellView.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, constant: -40).isActive = true
         secCellView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor).isActive = true
         secCellView.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor).isActive = true
         
         activeCasesLabel.topAnchor.constraint(equalTo: secCellView.topAnchor,constant: 13).isActive = true
         activeCasesLabel.widthAnchor.constraint(equalToConstant: 100).isActive = true
         activeCasesLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        activeCasesLabel.leadingAnchor.constraint(equalTo: secCellView.leadingAnchor, constant: 23).isActive = true
-
+        activeCasesLabel.leadingAnchor.constraint(equalTo: secCellView.leadingAnchor, constant: 17).isActive = true
+        
         activeCasesValue.topAnchor.constraint(equalTo: secCellView.topAnchor,constant: 13).isActive = true
         activeCasesValue.widthAnchor.constraint(equalToConstant: 100).isActive = true
         activeCasesValue.heightAnchor.constraint(equalToConstant: 20).isActive = true
         activeCasesValue.leadingAnchor.constraint(equalTo: activeCasesLabel.trailingAnchor, constant: 7).isActive = true
-
+        
         casesChange.topAnchor.constraint(equalTo: secCellView.topAnchor,constant: 13).isActive = true
         casesChange.widthAnchor.constraint(equalToConstant: 100).isActive = true
         casesChange.heightAnchor.constraint(equalToConstant: 20).isActive = true
         casesChange.leadingAnchor.constraint(equalTo: activeCasesValue.trailingAnchor, constant: 7).isActive = true
-
+        
         totalRecoveredLabel.topAnchor.constraint(equalTo: activeCasesLabel.bottomAnchor,constant: 7).isActive = true
         totalRecoveredLabel.widthAnchor.constraint(equalToConstant: 100).isActive = true
         totalRecoveredLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        totalRecoveredLabel.leadingAnchor.constraint(equalTo: secCellView.leadingAnchor, constant: 23).isActive = true
-
+        totalRecoveredLabel.leadingAnchor.constraint(equalTo: secCellView.leadingAnchor, constant: 17).isActive = true
+        
         totalRecoveredValue.topAnchor.constraint(equalTo: activeCasesLabel.bottomAnchor,constant: 7).isActive = true
         totalRecoveredValue.widthAnchor.constraint(equalToConstant: 100).isActive = true
         totalRecoveredValue.heightAnchor.constraint(equalToConstant: 20).isActive = true
         totalRecoveredValue.leadingAnchor.constraint(equalTo: totalRecoveredLabel.trailingAnchor, constant: 7).isActive = true
-
+        
         todayRecovered.topAnchor.constraint(equalTo: activeCasesLabel.bottomAnchor,constant: 5).isActive = true
         todayRecovered.widthAnchor.constraint(equalToConstant: 100).isActive = true
         todayRecovered.heightAnchor.constraint(equalToConstant: 20).isActive = true
         todayRecovered.leadingAnchor.constraint(equalTo: totalRecoveredValue.trailingAnchor, constant: 7).isActive = true
-
+        
         TotaldeathsLabel.topAnchor.constraint(equalTo: totalRecoveredLabel.bottomAnchor,constant: 7).isActive = true
         TotaldeathsLabel.widthAnchor.constraint(equalToConstant: 100).isActive = true
         TotaldeathsLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        TotaldeathsLabel.leadingAnchor.constraint(equalTo: secCellView.leadingAnchor, constant: 23).isActive = true
-
+        TotaldeathsLabel.leadingAnchor.constraint(equalTo: secCellView.leadingAnchor, constant: 17).isActive = true
+        
         TotaldeathsValue.topAnchor.constraint(equalTo: totalRecoveredLabel.bottomAnchor,constant: 5).isActive = true
         TotaldeathsValue.widthAnchor.constraint(equalToConstant: 100).isActive = true
         TotaldeathsValue.heightAnchor.constraint(equalToConstant: 20).isActive = true
         TotaldeathsValue.leadingAnchor.constraint(equalTo: TotaldeathsLabel.trailingAnchor, constant: 7).isActive = true
-
+        
         deathsChange.topAnchor.constraint(equalTo: totalRecoveredLabel.bottomAnchor,constant: 7).isActive = true
         deathsChange.widthAnchor.constraint(equalToConstant: 100).isActive = true
         deathsChange.heightAnchor.constraint(equalToConstant: 20).isActive = true
         deathsChange.leadingAnchor.constraint(equalTo: TotaldeathsValue.trailingAnchor, constant: 7).isActive = true
-
+        
         totalTestsLabel.topAnchor.constraint(equalTo: TotaldeathsLabel.bottomAnchor,constant: 7).isActive = true
         totalTestsLabel.widthAnchor.constraint(equalToConstant: 100).isActive = true
         totalTestsLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        totalTestsLabel.leadingAnchor.constraint(equalTo: secCellView.leadingAnchor, constant: 23).isActive = true
-
+        totalTestsLabel.leadingAnchor.constraint(equalTo: secCellView.leadingAnchor, constant: 17).isActive = true
+        
         totalTests.topAnchor.constraint(equalTo: TotaldeathsLabel.bottomAnchor,constant: 5).isActive = true
         totalTests.widthAnchor.constraint(equalToConstant: 100).isActive = true
         totalTests.heightAnchor.constraint(equalToConstant: 20).isActive = true
         totalTests.leadingAnchor.constraint(equalTo: totalTestsLabel.trailingAnchor, constant: 7).isActive = true
-
+        
         tests.topAnchor.constraint(equalTo: TotaldeathsLabel.bottomAnchor,constant: 7).isActive = true
         tests.widthAnchor.constraint(equalToConstant: 100).isActive = true
         tests.heightAnchor.constraint(equalToConstant: 20).isActive = true
@@ -361,13 +359,13 @@ class RegionHeaderCell: UICollectionReusableView, ChartViewDelegate {
         totalVaccineLabel.topAnchor.constraint(equalTo: totalTestsLabel.bottomAnchor,constant: 7).isActive = true
         totalVaccineLabel.widthAnchor.constraint(equalToConstant: 100).isActive = true
         totalVaccineLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        totalVaccineLabel.leadingAnchor.constraint(equalTo: secCellView.leadingAnchor, constant: 23).isActive = true
-
+        totalVaccineLabel.leadingAnchor.constraint(equalTo: secCellView.leadingAnchor, constant: 17).isActive = true
+        
         totalVaccine.topAnchor.constraint(equalTo: totalTestsLabel.bottomAnchor,constant: 5).isActive = true
         totalVaccine.widthAnchor.constraint(equalToConstant: 100).isActive = true
         totalVaccine.heightAnchor.constraint(equalToConstant: 20).isActive = true
         totalVaccine.leadingAnchor.constraint(equalTo: totalVaccineLabel.trailingAnchor, constant: 7).isActive = true
-
+        
         todayVaccine.topAnchor.constraint(equalTo: totalTestsLabel.bottomAnchor,constant: 7).isActive = true
         todayVaccine.widthAnchor.constraint(equalToConstant: 100).isActive = true
         todayVaccine.heightAnchor.constraint(equalToConstant: 20).isActive = true
@@ -384,7 +382,7 @@ class RegionHeaderCell: UICollectionReusableView, ChartViewDelegate {
         barCharView.centerXAnchor.constraint(equalTo: aCellView.centerXAnchor).isActive = true
         barCharView.widthAnchor.constraint(equalTo: aCellView.widthAnchor,constant: -40).isActive = true
         barCharView.bottomAnchor.constraint(equalTo: segmentedButtons.topAnchor ,constant: -5).isActive = true
-
+        
         segmentedButtons.bottomAnchor.constraint(equalTo: aCellView.bottomAnchor,constant: -10).isActive = true
         segmentedButtons.widthAnchor.constraint(equalToConstant: 250).isActive = true
         segmentedButtons.heightAnchor.constraint(equalToConstant: 30).isActive = true
@@ -395,7 +393,6 @@ class RegionHeaderCell: UICollectionReusableView, ChartViewDelegate {
         super.init(frame: frame)
         addSubview(topBar)
         addSubview(headLabel)
-        addSubview(mylabel)
         
         addSubview(secCellView)
         addSubview(secShadowView)
@@ -428,7 +425,7 @@ class RegionHeaderCell: UICollectionReusableView, ChartViewDelegate {
         
         addSubview(aCellView)
         addSubview(aShadowView)
-
+        
         addSubview(barCharView)
         addSubview(segmentedButtons)
         
