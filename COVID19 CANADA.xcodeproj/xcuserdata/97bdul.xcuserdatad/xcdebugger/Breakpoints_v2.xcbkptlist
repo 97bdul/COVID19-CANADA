@@ -3,4 +3,69 @@
    uuid = "1DD3A808-2941-4462-9DDC-0789EE779281"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "95CEBDDF-65C1-4A81-A839-7C940F651DA2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "COVID19 CANADA/ViewModels/CovidVC/FirstCustomCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "FirstCustomCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "95CEBDDF-65C1-4A81-A839-7C940F651DA2 - 6fcb9f2ecb5cdd89"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "one-time initialization function for identifier"
+                  moduleName = "COVID19 CANADA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/97bdul/Desktop/COVID19%20CANADA/COVID19%20CANADA/ViewModels/CovidVC/FirstCustomCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "95CEBDDF-65C1-4A81-A839-7C940F651DA2 - 70ea1db5138e5ff8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "COVID19_CANADA.FirstCustomCell.identifier.unsafeMutableAddressor : Swift.String"
+                  moduleName = "COVID19 CANADA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/97bdul/Desktop/COVID19%20CANADA/COVID19%20CANADA/ViewModels/CovidVC/FirstCustomCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "95CEBDDF-65C1-4A81-A839-7C940F651DA2 - 56c80bb375b8f8e7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static COVID19_CANADA.FirstCustomCell.identifier.getter : Swift.String"
+                  moduleName = "COVID19 CANADA"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/97bdul/Desktop/COVID19%20CANADA/COVID19%20CANADA/ViewModels/CovidVC/FirstCustomCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

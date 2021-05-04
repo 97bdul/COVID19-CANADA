@@ -46,7 +46,7 @@ class RegionVC: UIViewController, UICollectionViewDelegate, UICollectionViewDele
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.backgroundColor = .systemBackground
+        collectionView.backgroundColor = #colorLiteral(red: 0.9842278361, green: 0.9843689799, blue: 0.992039144, alpha: 1)
         collectionView.showsVerticalScrollIndicator = false
         return collectionView
     }()
@@ -83,7 +83,7 @@ class RegionVC: UIViewController, UICollectionViewDelegate, UICollectionViewDele
         return header
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: view.frame.size.width , height: 470)
+        return CGSize(width: view.frame.size.width , height: 520)
     }
     
     //  ViewDidLayoutSubViews

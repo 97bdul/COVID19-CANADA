@@ -34,6 +34,7 @@ class mainVC: UIViewController,UICollectionViewDelegate, UICollectionViewDelegat
     private let headerView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .systemBackground
         return view
         
     }()
@@ -72,7 +73,7 @@ class mainVC: UIViewController,UICollectionViewDelegate, UICollectionViewDelegat
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.showsHorizontalScrollIndicator = false
-        collectionView.backgroundColor = .systemBackground
+        collectionView.backgroundColor = #colorLiteral(red: 0.9842278361, green: 0.9843689799, blue: 0.992039144, alpha: 1)
         return collectionView
         
     }()
@@ -87,7 +88,7 @@ class mainVC: UIViewController,UICollectionViewDelegate, UICollectionViewDelegat
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.showsVerticalScrollIndicator = false
-        collectionView.backgroundColor = mainConstants.collectionViewBgColor
+        collectionView.backgroundColor = #colorLiteral(red: 0.9842278361, green: 0.9843689799, blue: 0.992039144, alpha: 1)
         return collectionView
         
     }()
@@ -189,7 +190,6 @@ class mainVC: UIViewController,UICollectionViewDelegate, UICollectionViewDelegat
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
         apiCall()
         
         topCollectionView.delegate = self

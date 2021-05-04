@@ -58,10 +58,10 @@ class RegionCell: UICollectionViewCell {
         regionLabel.text = "\(region)"
         
         let IntofTodDeaths = Int(totDeaths)
-        totalCasesLabel.text  = "CASES     \(totCase) "
-        todayCasesLabel.text  = "TODAY     \(todCases)"
-        totalDeathsLabel.text = "DEATHS    \(IntofTodDeaths)"
-        totalRecovLabel.text  = "RECOV     \(todCases)"
+        totalCasesLabel.text  = "Total CASES     \(totCase) "
+        todayCasesLabel.text  = "New CASES      \(todCases)"
+        totalDeathsLabel.text = "New DEATHS   \(IntofTodDeaths)"
+        totalRecovLabel.text  = "New  RECOV     \(todCases)"
         
     }
     
@@ -77,7 +77,7 @@ class RegionCell: UICollectionViewCell {
         cellView.widthAnchor.constraint(equalTo: contentView.widthAnchor).isActive = true
         cellView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
         
-        shadowView.applyshadowWithCorner(containerView: cellView, cornerRadious: 8, color: #colorLiteral(red: 0.1365393598, green: 0.2540451119, blue: 0.5676003658, alpha: 1))
+        shadowView.applyshadowWithCorner(containerView: cellView, cornerRadious: 8, color: #colorLiteral(red: 0, green: 0.3161689687, blue: 0.9998757243, alpha: 1))
         
         shadowView.topAnchor.constraint(equalTo: cellView.topAnchor).isActive = true
         shadowView.widthAnchor.constraint(equalTo: cellView.widthAnchor).isActive = true
@@ -86,25 +86,25 @@ class RegionCell: UICollectionViewCell {
         
         contentView.addSubview(totalCasesLabel)
         totalCasesLabel.topAnchor.constraint(equalTo: cellView.topAnchor,constant: 3).isActive = true
-        totalCasesLabel.widthAnchor.constraint(equalToConstant: 195).isActive = true
+        totalCasesLabel.widthAnchor.constraint(equalToConstant: 185).isActive = true
         totalCasesLabel.heightAnchor.constraint(equalToConstant: 25).isActive = true
         totalCasesLabel.leadingAnchor.constraint(equalTo: cellView.leadingAnchor,constant: 10).isActive = true
         
         contentView.addSubview(todayCasesLabel)
         todayCasesLabel.topAnchor.constraint(equalTo: cellView.topAnchor, constant: 3).isActive = true
-        todayCasesLabel.widthAnchor.constraint(equalToConstant: 115).isActive = true
+        todayCasesLabel.widthAnchor.constraint(equalToConstant: 145).isActive = true
         todayCasesLabel.heightAnchor.constraint(equalToConstant: 25).isActive = true
         todayCasesLabel.leadingAnchor.constraint(equalTo: totalCasesLabel.trailingAnchor).isActive = true
         
         contentView.addSubview(totalRecovLabel)
         totalRecovLabel.topAnchor.constraint(equalTo: todayCasesLabel.bottomAnchor, constant: -1).isActive = true
-        totalRecovLabel.widthAnchor.constraint(equalToConstant: 195).isActive = true
+        totalRecovLabel.widthAnchor.constraint(equalToConstant: 185).isActive = true
         totalRecovLabel.heightAnchor.constraint(equalToConstant: 25).isActive = true
         totalRecovLabel.leadingAnchor.constraint(equalTo: cellView.leadingAnchor,constant: 10).isActive = true
         
         contentView.addSubview(totalDeathsLabel)
         totalDeathsLabel.topAnchor.constraint(equalTo: todayCasesLabel.bottomAnchor, constant: -1).isActive = true
-        totalDeathsLabel.widthAnchor.constraint(equalToConstant: 115).isActive = true
+        totalDeathsLabel.widthAnchor.constraint(equalToConstant: 145).isActive = true
         totalDeathsLabel.heightAnchor.constraint(equalToConstant: 25).isActive = true
         totalDeathsLabel.leadingAnchor.constraint(equalTo: totalRecovLabel.trailingAnchor).isActive = true
         

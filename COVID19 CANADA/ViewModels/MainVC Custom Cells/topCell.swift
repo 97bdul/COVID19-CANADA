@@ -23,7 +23,7 @@ class topCell: UICollectionViewCell {
     private let cellView : UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.895261954)
         return view
     }()
     
@@ -73,7 +73,7 @@ class topCell: UICollectionViewCell {
     override func layoutSubviews() {
         
         
-        shadowView.applyshadowWithCorner(containerView: cellView, cornerRadious: topConstanats.cellCornerRadius, color: #colorLiteral(red: 0.8671220974, green: 0.8671220974, blue: 0.8671220974, alpha: 1))
+        shadowView.applyshadowWithCorner(containerView: cellView, cornerRadious: topConstanats.cellCornerRadius, color: #colorLiteral(red: 0, green: 0.4784809947, blue: 0.9998757243, alpha: 0.2189956564))
         
         cellView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
         cellView.widthAnchor.constraint(equalTo: contentView.widthAnchor).isActive = true

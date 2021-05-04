@@ -9,8 +9,9 @@ import UIKit
 
 struct bottomConstanats {
     
-    static let cellShadowColor: UIColor = #colorLiteral(red: 0, green: 0.4027371444, blue: 0.8489039877, alpha: 1)
+    static let cellShadowColor: UIColor = #colorLiteral(red: 0, green: 0.3293530925, blue: 0.9998757243, alpha: 1)
     static let cellCornerRadius: CGFloat = 10
+    static let cellBgClr: UIColor = .link
     
     static let dataLabelCR: CGFloat = 10
 }
@@ -21,7 +22,7 @@ class bottomCell: UICollectionViewCell {
     
     private let cellView : UIView = {
         let view = UIView()
-        view.backgroundColor = .systemBlue
+        view.backgroundColor = bottomConstanats.cellBgClr
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
