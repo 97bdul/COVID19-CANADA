@@ -26,7 +26,7 @@ class newsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDelega
     
     //APi
     
-    var searchKeyWord = "raptors"
+    var searchKeyWord = "covid"
     
     
     func apiCall() {

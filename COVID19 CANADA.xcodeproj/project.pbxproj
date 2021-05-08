@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F4F84C32640C11F004B5448 /* FirstCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4F84C22640C11F004B5448 /* FirstCustomCell.swift */; };
 		4F4F84C52640C130004B5448 /* SecondCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4F84C42640C130004B5448 /* SecondCustomCell.swift */; };
+		4F98F20526449E4900B80306 /* FirstTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F98F20426449E4900B80306 /* FirstTVCell.swift */; };
 		4FC1E1C626360E0C005FAD9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC1E1C526360E0C005FAD9E /* AppDelegate.swift */; };
 		4FC1E1C826360E0C005FAD9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC1E1C726360E0C005FAD9E /* SceneDelegate.swift */; };
 		4FC1E1CD26360E0C005FAD9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FC1E1CB26360E0C005FAD9E /* Main.storyboard */; };
@@ -86,8 +86,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4F4F84C22640C11F004B5448 /* FirstCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCustomCell.swift; sourceTree = "<group>"; };
 		4F4F84C42640C130004B5448 /* SecondCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCustomCell.swift; sourceTree = "<group>"; };
+		4F98F20426449E4900B80306 /* FirstTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTVCell.swift; sourceTree = "<group>"; };
 		4FC1E1C226360E0C005FAD9E /* COVID19 CANADA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "COVID19 CANADA.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FC1E1C526360E0C005FAD9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FC1E1C726360E0C005FAD9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -153,7 +153,6 @@
 		4F664D2C263F041F00DA1297 /* CovidVC */ = {
 			isa = PBXGroup;
 			children = (
-				4F4F84C22640C11F004B5448 /* FirstCustomCell.swift */,
 				4F4F84C42640C130004B5448 /* SecondCustomCell.swift */,
 				4FC3BF77264141C90056633C /* ThirdCustomCell.swift */,
 				4FC3BF79264141DB0056633C /* FourthCustomCell.swift */,
@@ -305,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				4FC1E24D26360F9F005FAD9E /* RegionCell.swift */,
+				4F98F20426449E4900B80306 /* FirstTVCell.swift */,
 				4FC1E24E26360F9F005FAD9E /* RegionHeaderCell.swift */,
 				4FC1E24F26360F9F005FAD9E /* bottomCell.swift */,
 				4FC1E25026360F9F005FAD9E /* topCell.swift */,
@@ -448,6 +448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F98F20526449E4900B80306 /* FirstTVCell.swift in Sources */,
 				4FC1E21326360EE0005FAD9E /* trackerVC.swift in Sources */,
 				4FC1E25126360F9F005FAD9E /* RegionCell.swift in Sources */,
 				4FC1E23C26360F7D005FAD9E /* Region.swift in Sources */,
@@ -457,7 +458,6 @@
 				4FC1E21626360EE0005FAD9E /* newsVC.swift in Sources */,
 				4FC1E1C626360E0C005FAD9E /* AppDelegate.swift in Sources */,
 				4FC1E21F26360EE0005FAD9E /* covidVC.swift in Sources */,
-				4F4F84C32640C11F004B5448 /* FirstCustomCell.swift in Sources */,
 				4FC1E21926360EE0005FAD9E /* RegionVC.swift in Sources */,
 				4FC1E1C826360E0C005FAD9E /* SceneDelegate.swift in Sources */,
 				4FC1E25726360F9F005FAD9E /* bottomCell.swift in Sources */,

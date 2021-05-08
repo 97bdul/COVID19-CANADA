@@ -26,7 +26,7 @@ class mainVC: UIViewController,UICollectionViewDelegate, UICollectionViewDelegat
         covidAPI.shared.fecthAPI(url:urlConstants.ONurl,collectionView: bottomCollectionView) { (data) in
             self.jsonRes = data
         }
-        newsAPI.shared.fetchAPI(searchKeyword: newsKeyword.capitalized, collectionView: topCollectionView) { (data) in
+        newsAPI.shared.fetchAPI(searchKeyword: newsKeyword, collectionView: topCollectionView) { (data) in
             self.newsRes = data
         }
     }

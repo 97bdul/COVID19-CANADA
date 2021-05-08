@@ -15,15 +15,16 @@ class covidVC: UIViewController {
     let vc4 = FourthCVC()
     
     var count = 0
-    static let labelArr = ["Covid19","Symptoms","WHO Guide","Vaccine"]
+    static let labelArr = ["COVID 19","WHO ADVICES","VACCINE"]
     
     private let segmentedController: UISegmentedControl = {
-        
         let seg = UISegmentedControl(items: covidVC.labelArr)
         seg.translatesAutoresizingMaskIntoConstraints = false
-        seg.tintColor = .gray
+        seg.setTitleTextAttributes( [NSAttributedString.Key.foregroundColor : UIColor.systemBackground], for: .selected)
+        seg.tintColor = .green
         seg.addTarget(self, action:#selector(segAction(_:)), for: .valueChanged)
         seg.selectedSegmentIndex = 0
+        seg.selectedSegmentTintColor = .link
         return seg
     }()
     
@@ -110,4 +111,3 @@ extension UIViewController {
         vc.view.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor).isActive = true
     }
 }
-
